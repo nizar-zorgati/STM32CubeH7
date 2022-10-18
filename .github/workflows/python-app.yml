@@ -20,23 +20,7 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.8"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        import enum
-        from optparse import OptionParser
-        import os
-        import pathlib
-        import pprint
-        import re
-        import sys
-        import xml.etree.ElementTree as ET
-        import zipfile
-        import hashlib
-        import logging
-        import time
-        print("packages installed !")
+        
     - name: run_valid
       run: |
-        # stop the build if there are Python syntax errors or undefined names
         python3 ${WORKSPACE}validateArchive.py -f ${WORKSPACE}/STM32CubeH7 --skip ".*__INTERNAL__.*"
