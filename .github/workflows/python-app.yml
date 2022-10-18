@@ -23,4 +23,4 @@ jobs:
         
     - name: run_valid
       run: |
-        python3 ${WORKSPACE}validateArchive.py -f ${WORKSPACE}/STM32CubeH7 --skip ".*__INTERNAL__.*"
+        python3 ${WORKSPACE}/validateArchive.py -f ${WORKSPACE}/stm32cubeh7 --skip ".*__INTERNAL__.*"
